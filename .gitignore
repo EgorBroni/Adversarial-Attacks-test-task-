@@ -1,0 +1,64 @@
+# macOS
+.DS_Store
+
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Local environments and packaging artifacts
+.venv/
+venv/
+*.egg-info/
+
+# Downloaded data and generated outputs
+data/
+outputs/
+
+# Notebooks are kept as local analysis tools
+*.ipynb
+.ipynb_checkpoints/
+
+# Local documentation and comparison experiments that are not part of the
+# public scratch-only ConvNeXt submission
+docs/
+scripts/stage0_clean.sh
+scripts/stage0_convnext.sh
+
+# Ignore all experiment artifacts by default. For the four ConvNeXt runs
+# originating from random initialization, publish only lightweight metrics
+# and plots; checkpoints and verbose logs remain local.
+runs/*
+!runs/stage0_convnext_scratch/
+!runs/stage0_convnext_scratch_v2/
+!runs/stage0_convnext_scratch_v3_160/
+!runs/stage0_convnext_scratch_v3_224/
+
+runs/stage0_convnext_scratch/*
+runs/stage0_convnext_scratch_v2/*
+runs/stage0_convnext_scratch_v3_160/*
+runs/stage0_convnext_scratch_v3_224/*
+
+!runs/stage0_convnext_scratch/eval_clean.csv
+!runs/stage0_convnext_scratch/metrics.jsonl
+!runs/stage0_convnext_scratch/training_history.csv
+!runs/stage0_convnext_scratch/training_curves.png
+
+!runs/stage0_convnext_scratch_v2/eval_clean.csv
+!runs/stage0_convnext_scratch_v2/metrics.jsonl
+!runs/stage0_convnext_scratch_v2/training_history.csv
+!runs/stage0_convnext_scratch_v2/training_curves.png
+
+!runs/stage0_convnext_scratch_v3_160/eval_clean.csv
+!runs/stage0_convnext_scratch_v3_160/metrics.jsonl
+!runs/stage0_convnext_scratch_v3_160/training_history.csv
+!runs/stage0_convnext_scratch_v3_160/training_curves.png
+
+!runs/stage0_convnext_scratch_v3_224/source_eval_clean.csv
+!runs/stage0_convnext_scratch_v3_224/eval_clean.csv
+!runs/stage0_convnext_scratch_v3_224/metrics.jsonl
+!runs/stage0_convnext_scratch_v3_224/training_history.csv
+!runs/stage0_convnext_scratch_v3_224/training_curves.png
